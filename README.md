@@ -1,6 +1,7 @@
 # Nuxt 3 Minimal Starter + NuxtUI
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Look at the [Nuxt UI Docs](https://ui.nuxt.com/getting-started) to see the UI Component for NuxtJS
 
 ## Setup
 

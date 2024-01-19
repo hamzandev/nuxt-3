@@ -14,10 +14,30 @@ const people = [
 ];
 
 const selected = ref([people[3]]);
+
+
+// data
+const users = ref(["Hamzan", "Imam", "Deni", "Jonathan", "Orang lain"]);
+const name = ref('Zannn')
+
+watch(
+  users,
+  async (value) => {
+    console.log(value);
+  },
+  { deep: true }
+);
 </script>
 
 <template>
-  <UButton @click="isOpen = true">Open CMDPallete</UButton>
+  <UButton @click="users.push('Aww shitt it\'s work!')">Add</UButton>
+  <UInput placeholder="Nama" v-model="name"/>
+  <span
+    class="block my-5 p-3 rounded-lg bg-gray-900"
+    v-for="user in users"
+    :key="user"
+    >{{ user }}</span
+  >
   <UModal v-model="isOpen">
     <UCommandPalette
       v-model="selected"
